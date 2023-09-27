@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* ---------------Body---------------- */
+
+body {
+  display: grid;
+  /* Set width: aside main */
+  /* Set height: head main/aside foot */
+  grid-template-rows: 100px auto 100px;
+  /* Layout by row */
+  grid-template-areas:
+    "head head"
+    "main main"
+    "foot foot";
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+/*---------------END OF Body ---------------*/
+
+/*---------------Navigation--------------- */
+header {
+    grid-area: head;
+    background-color: #212121;
+    padding-top: 0px;
+    position: sticky;
+    top: 0;
+    z-index: +300;
+  }
+  
+  header ul {
+    list-style: none;
+  }
+  
+  header a {
+    display: flex;
+    float: left;
+    list-style: none;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+  }
+  header a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: 0.1s;
+  }
+  
+  html.sr .listz {
+    visibility: hidden;
+  }
+  
+  .active-page {
+    color: #00f2ff;
+  }
+
+  /*---------------END OF Navigation--------------- */
+  
